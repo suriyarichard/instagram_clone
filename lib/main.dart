@@ -4,8 +4,12 @@ import 'utils/colors.dart';
 import 'responsive/mobile_screen_layout.dart';
 import 'responsive/web_screen_layout.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:firebase_core/firebase_core.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp( const MyApp());
 }
 
 class MyApp extends StatelessWidget {
