@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/login_screen.dart';
 import 'responsive/responsive_layout_screen.dart';
 import 'utils/colors.dart';
 import 'responsive/mobile_screen_layout.dart';
 import 'responsive/web_screen_layout.dart';
-
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -24,7 +24,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor:mobileBackgroundColor,
       ),
-      home:ResponsiveLayout(mobileScreenLayout:mobileScreenLayout(),webScreenLayout:webScreenLayout(),),
+      // home:ResponsiveLayout(mobileScreenLayout:mobileScreenLayout(),webScreenLayout:webScreenLayout(),),
+      home:LoginScreen(),
+      
     );
   }
 }
